@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AXLOS | Digital Solutions</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="root"></div>
+    <template id="legacy-static-site">
+
+    <!-- Loading Screen -->
+    <div class="loader">
+        <div class="loader-logo">AXLOS</div>
+        <div class="loader-line"></div>
+    </div>
+
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+
+            <a href="#home" class="logo">
+                AX<span>LOS</span>
+            </a>
+
+            <div class="nav-links" id="navLinks">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#projects">Projects</a>
+                <a href="#why">Why AXLOS</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <button type="button" class="nav-button" id="signInButton" aria-haspopup="dialog">
+                Sign in
+            </button>
+
+            <button class="menu-btn" id="menuBtn">
+                ☰
+            </button>
+
+        </nav>
+    </header>
+
+    <dialog class="sign-in-dialog" id="signInDialog" aria-labelledby="signInTitle">
+        <div class="sign-in-heading">
+            <div>
+                <div class="section-label">AXLOS ACCOUNT</div>
+                <h2 id="signInTitle">Your <span>account.</span></h2>
+            </div>
+            <button type="button" class="dialog-close" id="closeSignIn" aria-label="Close sign-in dialog">×</button>
+        </div>
+
+        <p class="sign-in-intro" id="signInIntro">Sign in or create an account to continue.</p>
+
+        <form id="signInForm" aria-describedby="signInStatus">
+            <label for="signInEmail">Email address</label>
+            <input id="signInEmail" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+
+            <label for="signInPassword">Password</label>
+            <input id="signInPassword" name="password" type="password" autocomplete="current-password" minlength="6" placeholder="At least 6 characters" required>
+
+            <button type="submit" id="authSubmit">Sign in</button>
+        </form>
+
+        <button type="button" class="auth-mode-toggle" id="authModeToggle">Create an account</button>
+
+        <div class="auth-account" id="authAccount" hidden>
+            <p id="authAccountEmail"></p>
+            <span class="auth-id-label">Your user ID</span>
+            <code id="authUserId"></code>
+            <button type="button" id="signOutButton">Sign out</button>
+        </div>
+
+        <p class="sign-in-status" id="signInStatus" role="status" aria-live="polite"></p>
+    </dialog>
+
+
+    <!-- HERO -->
+    <section class="hero" id="home" data-page="home">
+
+        <div class="hero-bg"></div>
+
+        <div class="hero-content">
+
+            <div class="badge">
+                <span></span>
+                Next Generation Technology
+            </div>
+
+            <h1>
+                Technology That
+                <span>Moves Business</span>
+                Forward.
+            </h1>
+
+            <p>
+                AXLOS creates modern digital solutions that help businesses
+                innovate, grow and stay secure in a rapidly changing world.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#services" class="primary-btn">
+                    Explore Services →
+                </a>
+
+                <a href="#contact" class="secondary-btn">
+                    Start a Project
+                </a>
+            </div>
+
+            <div class="hero-stats">
+
+                <div>
+                    <strong>7+</strong>
+                    <small>Services</small>
+                </div>
+
+                <div>
+                    <strong>100%</strong>
+                    <small>Digital</small>
+                </div>
+
+                <div>
+                    <strong>24/7</strong>
+                    <small>Support</small>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="hero-orb orb1"></div>
+        <div class="hero-orb orb2"></div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section class="about section" id="about" data-page="about">
+
+        <div class="section-label">ABOUT AXLOS</div>
+
+        <div class="about-grid">
+
+            <div>
+                <h2>
+                    We turn ideas into
+                    <span>digital reality.</span>
+                </h2>
+            </div>
+
+            <div>
+                <p>
+                    AXLOS is a technology startup focused on building modern,
+                    secure and scalable digital solutions for businesses.
+                </p>
+
+                <p>
+                    From websites and mobile applications to cybersecurity,
+                    cloud solutions and business technology, we help companies
+                    move forward with confidence.
+                </p>
+
+                <a href="#contact" class="text-link">
+                    Work with AXLOS →
+                </a>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SERVICES -->
+    <section class="services section" id="services" data-page="services">
+
+        <div class="section-header">
+
+            <div>
+                <div class="section-label">WHAT WE DO</div>
+
+                <h2>
+                    Our <span>Services</span>
+                </h2>
+            </div>
+
+            <p>
+                Powerful technology solutions designed
+                for modern businesses.
+            </p>
+
+        </div>
+
+
+        <div class="service-grid">
+
+            <div class="service-card">
+                <div class="service-number">01</div>
+                <div class="service-icon">🌐</div>
+
+                <h3>Web Development</h3>
+
+                <p>
+                    Modern, responsive websites and powerful
+                    web applications built for your business.
+                </p>
+
+                <a href="#contact">Learn More →</a>
+            </div>
+
+
+            <div class="service-card">
+                <div class="service-number">02</div>
+                <div class="service-icon">📱</div>
+
+                <h3>Mobile App Development</h3>
+
+                <p>
+                    User-friendly Android and iOS applications
+                    designed for today's digital world.
+                </p>
+
+                <a href="#contact">Learn More →</a>
+            </div>
+
+
+            <div class="service-card">
+                <div class="service-number">03</div>
+                <div class="service-icon">🔐</div>
+
+                <h3>Cybersecurity</h3>
+
+                <p>
+                    Protect your systems, applications and
+                    business data with modern security solutions.
+                </p>
+
+                <a href="#contact">Learn More →</a>
+            </div>
+
+
+            <div class="service-card">
+                <div class="service-number">04</div>
+                <div class="service-icon">🖥️</div>
+
+                <h3>IT Support</h3>
+
+                <p>
+                    Reliable technical support to keep your
+                    business technology running smoothly.
+                </p>
+
+                <a href="#contact">Learn More →</a>
+            </div>
+
+
+            <div class="service-card">
+                <div class="service-number">05</div>
+                <div class="service-icon">☁️</div>
+
+                <h3>Cloud Solutions</h3>
+
+                <p>
+                    Scalable cloud solutions that help businesses
+                    work smarter and grow faster.
+                </p>
+
+                <a href="#contact">Learn More →</a>
+            </div>
+
+
+            <div class="service-card">
+                <div class="service-number">06</div>
+                <div class="service-icon">🎨</div>
+
+                <h3>UI/UX Design</h3>
+
+                <p>
+                    Clean, beautiful and intuitive digital
+                    experiences users will love.
+                </p>
+
+                <a href="#contact">Learn More →</a>
+            </div>
+
+
+            <div class="service-card">
+                <div class="service-number">07</div>
+                <div class="service-icon">📊</div>
+
+                <h3>Business IT Solutions</h3>
+
+                <p>
+                    Technology strategies and solutions designed
+                    around your business goals.
+                </p>
+
+                <a href="#contact">Learn More →</a>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PROJECTS -->
+    <section class="projects section" id="projects" data-page="projects">
+
+        <div class="section-label">OUR WORK</div>
+
+        <h2>
+            Built for the <span>future.</span>
+        </h2>
+
+        <div class="project-grid">
+
+            <div class="project-card">
+                <div class="project-image project-one">
+                    <span>WEB</span>
+                </div>
+
+                <div class="project-info">
+                    <h3>Modern Business Website</h3>
+                    <p>Web Development</p>
+                </div>
+            </div>
+
+
+            <div class="project-card">
+                <div class="project-image project-two">
+                    <span>APP</span>
+                </div>
+
+                <div class="project-info">
+                    <h3>Smart Mobile Application</h3>
+                    <p>Mobile Development</p>
+                </div>
+            </div>
+
+
+            <div class="project-card">
+                <div class="project-image project-three">
+                    <span>SECURITY</span>
+                </div>
+
+                <div class="project-info">
+                    <h3>Business Security System</h3>
+                    <p>Cybersecurity</p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- WHY AXLOS -->
+    <section class="why section" id="why" data-page="why">
+
+        <div class="why-content">
+
+            <div>
+                <div class="section-label">WHY AXLOS</div>
+
+                <h2>
+                    Technology with
+                    <span>purpose.</span>
+                </h2>
+            </div>
+
+            <div class="why-list">
+
+                <div class="why-item">
+                    <div>01</div>
+                    <h3>Innovation</h3>
+                    <p>
+                        We use modern technologies to create
+                        better digital experiences.
+                    </p>
+                </div>
+
+                <div class="why-item">
+                    <div>02</div>
+                    <h3>Security</h3>
+                    <p>
+                        Security is built into the solutions
+                        we create.
+                    </p>
+                </div>
+
+                <div class="why-item">
+                    <div>03</div>
+                    <h3>Quality</h3>
+                    <p>
+                        We focus on reliable and high-quality
+                        technology solutions.
+                    </p>
+                </div>
+
+                <div class="why-item">
+                    <div>04</div>
+                    <h3>Growth</h3>goisi
+                    <p>
+                        Our solutions are designed to grow
+                        with your business.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+    <section class="contact section" id="contact" data-page="contact">
+
+        <div class="contact-box">
+
+            <div class="contact-text">
+
+                <div class="section-label">LET'S WORK TOGETHER</div>
+
+                <h2>
+                    Have an idea?
+                    <span>Let's build it.</span>
+                </h2>
+
+                <p>
+                    Tell us about your project and let's create
+                    something amazing together.
+                </p>
+
+                <div class="contact-details" aria-label="AXLOS contact details">
+                    <a class="contact-detail" href="mailto:axlos02@gmail.com">
+                        <span>Business email</span>
+                        axlos02@gmail.com
+                    </a>
+                    <a class="contact-detail" href="tel:+94743319658">
+                        <span>Telephone</span>
+                        +94 74 331 9658
+                    </a>
+                    <a class="whatsapp-link" href="https://wa.me/94743319658" target="_blank" rel="noopener noreferrer">
+                        WhatsApp AXLOS
+                    </a>
+                    <p class="contact-location">Sri Lanka</p>
+                </div>
+
+            </div>
+
+
+            <form id="contactForm" class="contact-form" aria-label="Send AXLOS a project inquiry">
+                <label for="contactName">Your name</label>
+                <input id="contactName" name="name" type="text" autocomplete="name" placeholder="Your name" required>
+
+                <label for="contactEmail">Email address</label>
+                <input id="contactEmail" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+
+                <label for="contactPhone">Telephone number</label>
+                <input id="contactPhone" name="phone" type="tel" autocomplete="tel" placeholder="+94 7X XXX XXXX">
+
+                <label for="contactProject">Project type</label>
+                <input id="contactProject" name="project" type="text" placeholder="Website, app, IT support..." required>
+
+                <label for="contactMessage">How can we help?</label>
+                <textarea id="contactMessage" name="message" placeholder="Tell us about your project..." required></textarea>
+
+                <button type="submit">
+                    Prepare email →
+                </button>
+                <p class="contact-form-status" id="contactStatus" role="status" aria-live="polite"></p>
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer data-page="contact">
+
+        <div class="footer-top">
+
+            <div>
+                <div class="footer-logo">AXLOS</div>
+
+                <p>
+                    Building digital solutions
+                    for the future.
+                </p>
+            </div>
+
+            <div class="footer-links">
+
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#projects">Projects</a>
+                <a href="#why">Why AXLOS</a>
+                <a href="#contact">Contact</a>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 AXLOS. All Rights Reserved.</p>
+            <p>Digital Solutions • Innovation • Security</p>
+        </div>
+
+    </footer>
+
+
+    </template>
+    <script type="module">
+        if (window.location.protocol === "file:") {
+            const legacySite = document.getElementById("legacy-static-site");
+            document.getElementById("root").replaceWith(legacySite.content.cloneNode(true));
+
+            const stylesheet = document.createElement("link");
+            stylesheet.rel = "stylesheet";
+            stylesheet.href = "./style.css";
+            document.head.append(stylesheet);
+
+            const legacyScript = document.createElement("script");
+            legacyScript.src = "./script.js";
+            document.body.append(legacyScript);
+
+            const legacyAuth = document.createElement("script");
+            legacyAuth.type = "module";
+            legacyAuth.src = "./auth.js";
+            document.body.append(legacyAuth);
+        } else {
+            await import("/src/main.jsx");
+        }
+    </script>
+
+</body>
+</html>
